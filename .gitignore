@@ -1,0 +1,6 @@
+/_pycache_
+/app/_pycache_
+
+*.pyc
+instance/app.db
+.env
