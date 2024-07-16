@@ -1,31 +1,57 @@
 * {
     font-family: sans-serif;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
 }
 
-h1 {
+.content {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    height: 600px;
+}
+
+.content h1 {
     color: rgb(61, 61, 61);
 }
+
 .post {
-    color: rgb(61, 61, 61);
+    color: rgb(59, 59, 59);
     padding: 10px;
     margin: 5px;
     background-color: #f3f3f3;
-    border-radius: 10px;
-    border: 2px solid blueviolet;
+    border-radius: 5px;
+    border: 2px solid rgb(82, 82, 82);
     transition: all 0.15s;
 }
 
 .post:hover {
     cursor: pointer;
-    box-shadow: 3px 3px rgb(55, 0, 71);
+    box-shadow: 3px 3px rgb(87, 87, 87);
     translate: -3px -3px;
 }
 
+nav {
+    background-color: #f3f3f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
 nav a {
-    color: #d64161;
-    font-size: 3em;
+    color: #ce3c5c;
+    font-size: 2em;
     margin-left: 50px;
     text-decoration: none;
+    transition: all 0.3s;
+}
+
+nav a:hover {
+    color: #ff7392;
+    transform: scale(1.1);
 }
 
 .alert {
@@ -42,7 +68,7 @@ nav a {
     background-color: #f0f0f0; /* Cor de fundo */
     color: #333; /* Cor do texto */
     border: 1px solid #ccc; /* Borda */
-    border-radius: 4px; /* Borda arredondada */
+    border-radius: 5px; /* Borda arredondada */
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Transições suaves */
 }
 

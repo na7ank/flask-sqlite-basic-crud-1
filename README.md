@@ -1,6 +1,7 @@
 ## Praticando CRUD:
 
 Criando um CRUD com interface usando flask e SQLite.
+Praticando Jinja2 (Mecanismo de template usado pelo Flask).
 
 https://www.digitalocean.com/community/tutorials/how-to-use-an-sqlite-database-in-a-flask-application
 

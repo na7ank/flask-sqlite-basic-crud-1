@@ -1,3 +1,7 @@
+<!-- 
+ Este é o template base que define a estrutura comum para todas as páginas do seu aplicativo. 
+ Ele contém os elementos HTML padrão, como a definição do doctype, a seção head e o corpo da página. 
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,12 +15,16 @@
         <a href="{{ url_for('create') }}">Create</a>
         <a href="#">About</a>
     </nav>
-    <hr>
+
     <div class="content">
         {% for message in get_flashed_messages() %}
             <div class="alert">{{ message }}</div>
         {% endfor %}
-
+        <!--
+        O bloco block content endblock dentro da div content é um espaço reservado.
+        Esse espaço será preenchido com conteúdo específico definido em templates filhos, como index.html
+        ou create.html
+        -->
         {% block content %} {% endblock %}
     </div>
 </body>
