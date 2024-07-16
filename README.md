@@ -28,9 +28,10 @@ python-sqlite-flask/
 ├── README.md
 └── requirements.txt
 ```
-- static e templates: Diretórios para arquivos estáticos e templates Jinja2, respectivamente.
-- ``app.py``: O arquivo principal do seu aplicativo Flask.
-- instance: Diretório onde seu arquivo de banco de dados app.db estará localizado.
+- ``python-sqlite-flask/`` : Diretório Raíz
+- ``app/`` : O arquivo principal do seu aplicativo Flask.
+- ``static/``: Diretório para arquivos estáticos como folhas de estilos ou imagens.
+- ``templates/``: Diretório para htmls que serão renderizados dinamicamente pelo **Jinja2** durante funcionamento do app.
 - ``.dockerignore``: Arquivo para listar os arquivos e diretórios que não devem ser incluídos na imagem Docker.
 - ``.gitignore``: Arquivo para listar os arquivos e diretórios que não devem ser incluídos no controle de versão.
 - ``Dockerfile``: Arquivo de configuração para criar a imagem Docker.
