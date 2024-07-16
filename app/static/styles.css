@@ -3,42 +3,28 @@
     box-sizing: border-box;
 }
 body {
+    width: 100%;
+    height: 100vh;
     margin: 0;
-}
-
-.content {
     display: flex;
     flex-direction: column;
-    overflow-y: scroll;
-    height: 600px;
-}
+    align-items: center;
+    justify-content: center;
 
-.content h1 {
-    color: rgb(61, 61, 61);
-}
-
-.post {
-    color: rgb(59, 59, 59);
-    padding: 10px;
-    margin: 5px;
-    background-color: #f3f3f3;
-    border-radius: 5px;
-    border: 2px solid rgb(82, 82, 82);
-    transition: all 0.15s;
-}
-
-.post:hover {
-    cursor: pointer;
-    box-shadow: 3px 3px rgb(87, 87, 87);
-    translate: -3px -3px;
+    position: relative;
 }
 
 nav {
-    background-color: #f3f3f3;
+    background-color: #433D8B;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 10px;
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 nav a {
@@ -54,26 +40,65 @@ nav a:hover {
     transform: scale(1.1);
 }
 
+
+.content {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+
+    margin-bottom: 10px;
+}
+
+.content h1 {
+    color: #17153B;
+}
+
+.post {
+    color: #2E236C;
+    padding: 10px;
+    margin: 5px;
+    background-color: #fff5f7;
+    border-radius: 5px;
+    border: 2px solid #433D8B;
+    transition: all 0.15s;
+
+    position: relative;
+}
+
+.post:hover {
+    cursor: pointer;
+    box-shadow: 3px 3px #877dec;
+    translate: -3px -3px;
+}
+
 .alert {
     padding: 20px;
     margin: 5px;
     color: #970020;
-    background-color: #ffd5de;
+    background-color: #ffb8c7;
 }
 
 .edit-button {
-    text-decoration: none; /* Remove o sublinhado */
-    display: inline-block; /* Garante que o link se comporte como um bloco */
-    padding: 8px 16px; /* Adiciona um padding interno para espaço ao redor do texto */
-    background-color: #f0f0f0; /* Cor de fundo */
-    color: #333; /* Cor do texto */
-    border: 1px solid #ccc; /* Borda */
-    border-radius: 5px; /* Borda arredondada */
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Transições suaves */
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px;
+    background-color: transparent;
+    color: #17153B;
+
+    border-left: 2px solid #433D8B;
+    border-bottom: 2px solid #433D8B;
+    border-radius: 0 0 0 5px;
+    
+
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; 
+
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .edit-button:hover {
-    background-color: #e0e0e0; /* Cor de fundo ao passar o mouse */
-    color: #555; /* Cor do texto ao passar o mouse */
-    border-color: #bbb; /* Cor da borda ao passar o mouse */
+    background-color: #5f4fb9;
+    color: #FFF;
 }
