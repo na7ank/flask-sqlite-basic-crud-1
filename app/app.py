@@ -83,5 +83,9 @@ def delete(id):
     flash('"{}" was successfully deleted!'.format(post['title']))
     return redirect(url_for('index'))
 
+@app.route('/about/', methods=('GET',))
+def about():
+    return render_template('about.html')
+
 if __name__ == '__main__':
     app.run(host='192.168.10.184', port=8501)

@@ -14,12 +14,12 @@
     <nav>
         <a href="{{ url_for('index') }}">Posts</a>
         <a href="{{ url_for('create') }}">Create</a>
-        <a href="#">About</a>
+        <a href="{{ url_for('about') }}">About</a>
     </nav>
 
     <div class="content">
         {% for message in get_flashed_messages() %}
-            <div class="alert">{{ message }}</div>
+            <div class="red-alert">{{ message }}</div>
         {% endfor %}
         <!--
         O bloco block content endblock dentro da div content é um espaço reservado.
