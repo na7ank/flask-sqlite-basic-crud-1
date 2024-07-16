@@ -2,6 +2,7 @@
     font-family: sans-serif;
     box-sizing: border-box;
 }
+
 body {
     width: 100%;
     height: 100vh;
@@ -9,11 +10,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-
-    position: relative;
+    justify-content: flex-start;
+    gap: 0;
 }
-
+/* 
+┌──────────────────────────────────────────────────────────────────────────┐
+│   NAV TOP MENU                                                           │
+└──────────────────────────────────────────────────────────────────────────┘
+*/
 nav {
     background-color: #433D8B;
     display: flex;
@@ -21,14 +25,11 @@ nav {
     justify-content: center;
     padding: 10px;
     width: 100%;
-
-    position: absolute;
-    top: 0;
-    right: 0;
+    height: 50px;
 }
 
 nav a {
-    color: #ce3c5c;
+    color: #ff6889;
     font-size: 2em;
     margin-left: 50px;
     text-decoration: none;
@@ -36,24 +37,29 @@ nav a {
 }
 
 nav a:hover {
-    color: #ff7392;
+    color: #ff9cb1;
     transform: scale(1.1);
 }
-
-
+/* 
+┌──────────────────────────────────────────────────────────────────────────┐
+│   CENTRAL CONTENT                                                        │
+└──────────────────────────────────────────────────────────────────────────┘
+*/
 .content {
     width: 80%;
     display: flex;
     flex-direction: column;
-    overflow-y: scroll;
-
-    margin-bottom: 10px;
+    margin-top: 50px;
 }
 
 .content h1 {
     color: #17153B;
 }
-
+/* 
+┌──────────────────────────────────────────────────────────────────────────┐
+│   POST CARD                                                              │
+└──────────────────────────────────────────────────────────────────────────┘
+*/
 .post {
     color: #2E236C;
     padding: 10px;
@@ -62,43 +68,100 @@ nav a:hover {
     border-radius: 5px;
     border: 2px solid #433D8B;
     transition: all 0.15s;
-
     position: relative;
 }
 
 .post:hover {
     cursor: pointer;
-    box-shadow: 3px 3px #877dec;
+    box-shadow: 3px 3px #685bfa;
     translate: -3px -3px;
 }
 
 .alert {
     padding: 20px;
     margin: 5px;
-    color: #970020;
-    background-color: #ffb8c7;
+    color: #d6002e;
+    background-color: #ff587c;
 }
 
 .edit-button {
+    padding: 5px;
+    color: #17153B;
     text-decoration: none;
     display: inline-block;
-    padding: 5px;
     background-color: transparent;
-    color: #17153B;
-
+    /* A borda desse botao ficou muito estilosa */
     border-left: 2px solid #433D8B;
     border-bottom: 2px solid #433D8B;
     border-radius: 0 0 0 5px;
-    
-
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; 
-
+    /* Mesmo com display flex posso usar position relative */
     position: absolute;
     top: 0;
     right: 0;
+    transition: all 0.3s ease; 
 }
 
 .edit-button:hover {
-    background-color: #5f4fb9;
+    background-color: #7363ca;
+    color: #FFF;
+}
+
+/* 
+┌──────────────────────────────────────────────────────────────────────────┐
+│   CREATE FORM                                                            │
+└──────────────────────────────────────────────────────────────────────────┘
+*/
+form {
+    color: #2E236C;
+    background-color: #fff5f7;
+    border: 2px solid #433D8B;
+    padding: 20px;
+    border-radius: 5px;
+    width: fit-content;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+
+form input {
+    outline: none;
+}
+
+form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #433D8B;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form input[type="text"] {
+    height: 40px;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button[type="submit"] {
+    padding: 10px 20px;
+    color: #17153B;
+    background-color: transparent;
+    border: 2px solid #433D8B;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: #7363ca;
     color: #FFF;
 }

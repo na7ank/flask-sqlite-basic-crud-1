@@ -1,0 +1,44 @@
+/* Chrome, Edge, and Safari */
+::-webkit-scrollbar {
+    width: 12px; /* largura da barra de rolagem vertical */
+    height: 12px; /* altura da barra de rolagem horizontal */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* cor do fundo da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #800080; /* cor roxa da parte rolável da barra de rolagem */
+    border-radius: 10px; /* arredondamento da borda */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #660066; /* cor roxa mais escura quando o mouse está sobre a parte rolável */
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin; /* largura fina */
+    scrollbar-color: #800080 #f1f1f1; /* cor roxa da parte rolável da barra de rolagem e cor do fundo da barra de rolagem */
+}
+
+/* Opera */
+body::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #800080;
+    border-radius: 10px;
+    border: 3px solid #f1f1f1;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #660066;
+}

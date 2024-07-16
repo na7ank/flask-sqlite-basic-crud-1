@@ -21,7 +21,6 @@ def get_post(post_id):
         abort(404)
     return post
 
-
 @app.route('/')
 def index():
     conn = get_db_connection()
