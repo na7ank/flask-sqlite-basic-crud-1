@@ -36,6 +36,7 @@ Diretórios:
 - ``app/`` : O arquivo principal do seu aplicativo Flask.
 - ``static/``: Diretório para arquivos estáticos como folhas de estilos ou imagens.
 - ``templates/``: Diretório para htmls que serão renderizados dinamicamente pelo **Jinja2** durante funcionamento do app.
+- ``database/``: Contém o banco de dados sqlite e arquivos para configurações iniciais do base.
 
 Templates:
 - ``base.html``: html principal 'pai' que o app renderiza. Os outros blocos herdam essa estrutura.
@@ -43,7 +44,9 @@ Templates:
 - ``about.html``: Bloco com um texto explicativo.
 - ``edit.html``: Bloco responsável por editar ou deletar dados.
 
-Arquivos de Configuração:
+Arquivos de Configuração e outros:
 - ``.dockerignore``: Arquivo para listar os arquivos e diretórios que não devem ser incluídos na imagem Docker.
 - ``.gitignore``: Arquivo para listar os arquivos e diretórios que não devem ser incluídos no controle de versão.
 - ``Dockerfile``: Arquivo de configuração para criar a imagem Docker.
+- ``schema.sql``: SQL com querys iniciais para criar uma tabela por exemplo.
+- ``init_db.py``: Script para executar as querys em ``schema.sql``.

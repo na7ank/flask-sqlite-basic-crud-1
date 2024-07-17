@@ -50,10 +50,13 @@ nav a:hover {
 .content {
     width: 80%;
     display: flex;
+    padding: 20px;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 10px;
+
+    overflow-y: scroll;
 }
 
 .content h1 {
@@ -67,7 +70,7 @@ nav a:hover {
 */
 .post {
     color: #2E236C;
-    width: 100%;
+    width: 90%;
     padding: 10px;
     margin: 5px;
     background-color: #fff5f7;
