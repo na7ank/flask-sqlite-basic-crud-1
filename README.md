@@ -47,10 +47,12 @@ python-sqlite-flask/
 ### Arquivos de Configuração e outros:
 - ``.dockerignore``: Arquivo para listar os arquivos e diretórios que não devem ser incluídos na imagem Docker.
 - ``.gitignore``: Arquivo para listar os arquivos e diretórios que não devem ser incluídos no controle de versão.
+- ``.gitattributes``: Arquivo selecionar qual linguagem o repositório considera para mostrar a % de linguagens utilizadas.
 - ``Dockerfile``: Arquivo de configuração para criar a imagem Docker.
 - ``requirements.txt``: Módulos requisitos python para rodar o projeto.
 - ``schema.sql``: SQL com querys iniciais para criar uma tabela por exemplo.
 - ``init_db.py``: Script para executar as querys em ``schema.sql``.
 
+## Para progressos sobre autenticação:
 
-
+https://www.digitalocean.com/community/tutorials/how-to-add-authentication-to-your-app-with-flask-login
