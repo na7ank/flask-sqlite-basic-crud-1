@@ -54,15 +54,27 @@ Arquivos de Configuração e outros:
 
 ### Branch para testes antes de produção:
 
+Clonando:
 - git clone repositorio
+
+Criando um branch para testes:
 - git checkout -b test-branch
+
+Após fazer alterações:
 - git add .
 - git commit -m "Descrição das minhas alterações"
+
+Enviar novo branch para repositório remoto:
 - git push origin test-branch
 
+Alterando a branch para branch main:
 - git checkout main
 - git pull origin main
+
+Merge das branchs:
 - git merge minha-nova-branch
 - git add .
 - git commit -m "Resolve merge conflicts"
+
+Envie o branch main atualizado para o repositório:
 - git push origin main
