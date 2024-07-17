@@ -1,5 +1,4 @@
-# Considerar apenas arquivos .py como Python
-*.py linguist-language=Python
-
-# Ignorar todos os outros arquivos na análise de linguagem
-* linguist-vendored
+# ingore html, css, markdown
+*.html linguist-detectable=false
+*.css linguist-detectable=false
+*.md linguist-detectable=false
