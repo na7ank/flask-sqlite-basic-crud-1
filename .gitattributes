@@ -1,5 +1,4 @@
-# Considerar apenas arquivos .py como Python
-*.py linguist-language=Python
-
 # Ignorar todos os outros arquivos na análise de linguagem
 * linguist-vendored
+# Considerar apenas arquivos .py como Python
+*.py linguist-language=Python
