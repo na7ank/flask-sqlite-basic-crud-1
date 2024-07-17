@@ -47,6 +47,7 @@ python-sqlite-flask/
 ### Arquivos de Configuração e outros:
 - ``.dockerignore``: Arquivo para listar os arquivos e diretórios que não devem ser incluídos na imagem Docker.
 - ``.gitignore``: Arquivo para listar os arquivos e diretórios que não devem ser incluídos no controle de versão.
+- ``.gitattributes``: Arquivo selecionar qual linguagem o repositório considera para mostrar a % de linguagens utilizadas.
 - ``Dockerfile``: Arquivo de configuração para criar a imagem Docker.
 - ``requirements.txt``: Módulos requisitos python para rodar o projeto.
 - ``schema.sql``: SQL com querys iniciais para criar uma tabela por exemplo.
