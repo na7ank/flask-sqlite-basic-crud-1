@@ -52,5 +52,6 @@ python-sqlite-flask/
 - ``schema.sql``: SQL com querys iniciais para criar uma tabela por exemplo.
 - ``init_db.py``: Script para executar as querys em ``schema.sql``.
 
+## Para progressos sobre autenticação:
 
-
+https://www.digitalocean.com/community/tutorials/how-to-add-authentication-to-your-app-with-flask-login
