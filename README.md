@@ -56,3 +56,13 @@ Arquivos de Configuração e outros:
 
 - git clone repositorio
 - git checkout -b test-branch
+- git add .
+- git commit -m "Descrição das minhas alterações"
+- git push origin test-branch
+
+- git checkout main
+- git pull origin main
+- git merge minha-nova-branch
+- git add .
+- git commit -m "Resolve merge conflicts"
+- git push origin main
