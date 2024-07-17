@@ -1,4 +1,8 @@
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original-wordmark.svg" width="50" height="40"/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original-wordmark.svg" width="50" height="40"/>   
+
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg" width="50" height="40"/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" width="50" height="40"/>
+                 
+
 ## Praticando CRUD com flask e sqlite:
 Criando um CRUD com interface usando flask e SQLite.
 Praticando Jinja2 (Mecanismo de template usado pelo Flask).
