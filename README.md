@@ -51,3 +51,8 @@ Arquivos de Configuração e outros:
 - ``requirements.txt``: Módulos requisitos python para rodar o projeto.
 - ``schema.sql``: SQL com querys iniciais para criar uma tabela por exemplo.
 - ``init_db.py``: Script para executar as querys em ``schema.sql``.
+
+### Branch para testes antes de produção:
+
+- git clone repositorio
+- git checkout -b test-branch
