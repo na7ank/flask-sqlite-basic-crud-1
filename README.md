@@ -31,20 +31,20 @@ python-sqlite-flask/
 └── requirements.txt
 ```
 
-Diretórios:
+### Diretórios:
 - ``python-sqlite-flask/`` : Diretório raíz do projeto.
 - ``app/`` : O arquivo principal ``app.py`` do seu aplicativo flask.
 - ``static/``: Diretório para arquivos estáticos como folhas de estilos ou imagens.
 - ``templates/``: Diretório para htmls que serão renderizados dinamicamente pelo **Jinja2** durante funcionamento do app.
 - ``database/``: Contém o banco de dados sqlite e arquivos para configurações iniciais da base.
 
-Templates:
+### Templates:
 - ``base.html``: html principal 'pai' que o app renderiza. Os outros blocos herdam essa estrutura.
 - ``index.html``: Bloco com o layout dos posts recuperados do banco de dados.
 - ``about.html``: Bloco com um texto explicativo.
 - ``edit.html``: Bloco responsável por editar ou deletar dados.
 
-Arquivos de Configuração e outros:
+### Arquivos de Configuração e outros:
 - ``.dockerignore``: Arquivo para listar os arquivos e diretórios que não devem ser incluídos na imagem Docker.
 - ``.gitignore``: Arquivo para listar os arquivos e diretórios que não devem ser incluídos no controle de versão.
 - ``Dockerfile``: Arquivo de configuração para criar a imagem Docker.
@@ -52,17 +52,5 @@ Arquivos de Configuração e outros:
 - ``schema.sql``: SQL com querys iniciais para criar uma tabela por exemplo.
 - ``init_db.py``: Script para executar as querys em ``schema.sql``.
 
-### Branch para testes antes de produção:
+### Sobre criação de branchs para testes:
 
-- git clone repositorio
-- git checkout -b test-branch
-- git add .
-- git commit -m "Descrição das minhas alterações"
-- git push origin test-branch
-
-- git checkout main
-- git pull origin main
-- git merge minha-nova-branch
-- git add .
-- git commit -m "Resolve merge conflicts"
-- git push origin main
