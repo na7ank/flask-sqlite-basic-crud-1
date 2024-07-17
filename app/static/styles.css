@@ -95,8 +95,20 @@ nav a:hover {
     background-color: #ffadbf;
 }
 
+.created-at {
+    padding: 2px;
+    margin: 5px;
+    position: absolute;
+    font-size: 0.9rem;
+    text-align: right;
+    color: #7774a7;
+    bottom: 0;
+    right: 0;
+}
+
 .edit-button {
     padding: 5px;
+    font-size: 1.1rem;
     color: #17153B;
     text-decoration: none;
     display: inline-block;

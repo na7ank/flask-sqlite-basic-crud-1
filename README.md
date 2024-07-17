@@ -52,6 +52,5 @@ python-sqlite-flask/
 - ``schema.sql``: SQL com querys iniciais para criar uma tabela por exemplo.
 - ``init_db.py``: Script para executar as querys em ``schema.sql``.
 
-### Sobre criação de branchs para testes:
 
 
