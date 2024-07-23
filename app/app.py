@@ -8,7 +8,8 @@ app.secret_key = os.urandom(24)
 
 
 def get_db_connection():
-    conn = sqlite3.connect('./app/database/database.db')
+    #conn = sqlite3.connect('./database/database.db')
+    conn = sqlite3.connect('./app/database/database.db') # Para o Docker Container
     conn.row_factory = sqlite3.Row
     return conn
 
@@ -24,7 +25,7 @@ def get_post(post_id):
 @app.route('/')
 def index():
     conn = get_db_connection()
-    posts = conn.execute('SELECT * FROM posts').fetchall()
+    posts = conn.execute('SELECT * FROM posts ORDER BY created DESC').fetchall()
     conn.close()
     return render_template('index.html', posts=posts)
 
@@ -44,8 +45,10 @@ def create():
                          (title, content))
             conn.commit()
             conn.close()
-            return redirect(url_for('index'))
 
+            flash('Novo Post !', 'green')
+            return redirect(url_for('index'))
+    
     return render_template('create.html')
 
 @app.route('/<int:id>/edit/', methods=('GET', 'POST'))
@@ -80,7 +83,7 @@ def delete(id):
     conn.execute('DELETE FROM posts WHERE id = ?', (id,))
     conn.commit()
     conn.close()
-    flash('"{}" was successfully deleted!'.format(post['title']))
+    flash('Post Deletado !', 'red')
     return redirect(url_for('index'))
 
 @app.route('/about/', methods=('GET',))

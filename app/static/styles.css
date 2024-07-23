@@ -57,6 +57,7 @@ nav a:hover {
     margin-top: 10px;
 
     overflow-y: scroll;
+    position: relative;
 }
 
 .content h1 {
@@ -80,20 +81,76 @@ nav a:hover {
     position: relative;
 }
 
+.post h2 {
+    background-color: #e1dfff;
+    position: absolute;
+    padding: 5px;
+    margin: 0;
+    top: 0;
+    left: 0;
+
+    /* A borda desse botao ficou muito estilosa */
+    border-right: 2px solid #433D8B;
+    border-bottom: 2px solid #433D8B;
+    border-radius: 0 0 5PX 0px;
+}
 .post:hover {
     cursor: pointer;
     box-shadow: 3px 3px #685bfa;
     translate: -3px -3px;
 }
 
+.post .post-texts {
+    width: 80%;
+    margin: 20px;
+    overflow: hidden;
+    max-height: 80px;
+    word-wrap: break-word;
+}
+
+.green-alert {
+    padding: 20px;
+    margin: 5px;
+    color: #00b99a;
+    border-radius: 5px;
+    border: 2px solid #41ff80;
+    background-color: #e2fff9;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+}
 .red-alert {
     padding: 20px;
     margin: 5px;
     color: #ff0037;
     border-radius: 5px;
-    border-bottom: 2px solid #ff0037;
-    background-color: #ffadbf;
+    border: 2px solid #ff0037;
+    background-color: #fde3e9;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1000;
 }
+
+.flash-message {
+    opacity: 1;
+    transition: opacity 2s ease-out;
+    animation: fadeOut 5s forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
 
 .created-at {
     padding: 2px;

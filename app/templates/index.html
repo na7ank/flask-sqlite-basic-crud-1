@@ -7,7 +7,7 @@
         <div class='post'>
             <p class="created-at">{{ post['created'] }}</p>
             <h2>{{ post['title'] }}</h2>
-            <p>{{ post['content'] }}</p>
+            <p class="post-texts">{{ post['content'] }}</p>
             <a class="edit-button" href="{{ url_for('edit', id=post['id']) }}">Edit</a>
         </div>
     {% endfor %}
