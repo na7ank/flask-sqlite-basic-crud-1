@@ -8,7 +8,7 @@ app.secret_key = os.urandom(24)
 
 
 def get_db_connection():
-    conn = sqlite3.connect('./database/database.db')
+    conn = sqlite3.connect('./app/database/database.db')
     conn.row_factory = sqlite3.Row
     return conn
 
@@ -87,5 +87,9 @@ def delete(id):
 def about():
     return render_template('about.html')
 
+"""
 if __name__ == '__main__':
     app.run(host='192.168.10.184', port=8501)
+"""
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=8501)
