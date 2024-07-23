@@ -1,21 +1,23 @@
-# Use the official lightweight Python image.
-# https://hub.docker.com/_/python
-FROM python:3.9-slim
+# Use uma imagem base do Python
+FROM python:3.11-slim
 
-# Set the working directory in the container.
+# Defina o diretório de trabalho dentro do container
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
-ADD . /app
+# Copie o arquivo requirements.txt para o container
+COPY requirements.txt requirements.txt
 
-# Install any needed packages specified in requirements.txt
+# Instale as dependências
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Make port 80 available to the world outside this container
-EXPOSE 80
+# Copie o diretório da aplicação para o container
+COPY app/ app/
 
-# Define environment variable
-ENV NAME World
+# Defina a variável de ambiente para o Flask
+ENV FLASK_APP=app/app.py
 
-# Run app.py when the container launches
-CMD ["python", "app.py"]
+# Exponha a porta que o Flask usará
+EXPOSE 8501
+
+# Comando para rodar a aplicação Flask
+CMD ["flask", "run", "--host=0.0.0.0", "--port=8501"]
