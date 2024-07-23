@@ -18,9 +18,13 @@
     </nav>
 
     <div class="content">
-        {% for message in get_flashed_messages() %}
-            <div class="red-alert">{{ message }}</div>
-        {% endfor %}
+        {% with messages = get_flashed_messages(with_categories=True) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="flash-message {{ category }}-alert">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
         <!--
         O bloco block content endblock dentro da div content é um espaço reservado.
         Esse espaço será preenchido com conteúdo específico definido em templates filhos, como index.html
