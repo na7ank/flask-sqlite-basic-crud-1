@@ -60,7 +60,7 @@ https://www.digitalocean.com/community/tutorials/how-to-add-authentication-to-yo
 ## Criando o Container:
 
 ### Construa a imagem Docker
-docker build -t meu-app-flask .
+- ``docker build -t meu-app-flask .``
 
 ### Rode o container
-docker run -p 8501:8501 meu-app-flask
+- ``docker run -p 8501:8501 meu-app-flask``
